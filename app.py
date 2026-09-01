@@ -8,3 +8,5 @@ model = VoxtralForConditionalGeneration.from_pretrained(repo_id, dtype=torch.bfl
 
 inputs = procerssor.apply_transcription_request(language="en", audio="https://huggingface.co/datasets/hf-internal-testing/dummy-audio-samples/resolve/main/obama.mp3", model_id=repo_id)
 inputs = input.to(devicce, dtype=torch.bfloat16)
+
+outputs = moderl.generate(**inputs, max_new_tokens=500)
