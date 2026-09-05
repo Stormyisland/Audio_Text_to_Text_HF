@@ -12,4 +12,5 @@ inputs = input.to(devicce, dtype=torch.bfloat16)
 outputs = moderl.generate(**inputs, max_new_tokens=500)
 decode_outputs = processor.batch_decode(outputs[:, inputs_ids.shape[1]:], skip_special_tokens=True)
 
+print('\nGenerated responses:')
                                         
